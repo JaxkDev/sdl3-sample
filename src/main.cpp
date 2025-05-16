@@ -38,8 +38,7 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[]) {
     }
     
     // create a window
-   
-    SDL_Window* window = SDL_CreateWindow("SDL Minimal Sample", windowStartWidth, windowStartHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_HIGH_PIXEL_DENSITY);
+    SDL_Window* window = SDL_CreateWindow("Main Window Title", windowStartWidth, windowStartHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_HIGH_PIXEL_DENSITY);
     if (not window){
         return SDL_Fail();
     }
@@ -87,8 +86,8 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[]) {
     // get the on-screen dimensions of the text. this is necessary for rendering it
     auto messageTexProps = SDL_GetTextureProperties(messageTex);
     SDL_FRect text_rect{
-            .x = 0,
-            .y = 0,
+            .x = 10,
+            .y = 10,
             .w = float(SDL_GetNumberProperty(messageTexProps, SDL_PROP_TEXTURE_WIDTH_NUMBER, 0)),
             .h = float(SDL_GetNumberProperty(messageTexProps, SDL_PROP_TEXTURE_HEIGHT_NUMBER, 0))
     };
@@ -136,7 +135,7 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[]) {
        .music = music,
     };
     
-    SDL_SetRenderVSync(renderer, -1);   // enable vysnc
+    SDL_SetRenderVSync(renderer, SDL_RENDERER_VSYNC_ADAPTIVE);   // enable vysnc
     
     SDL_Log("Application started successfully!");
 

@@ -5,15 +5,14 @@ bundles.
 See [src/main.cpp](src/main.cpp) for the code. 
 
 ### Building And Running
-Are you a complete beginner? If so, read [this](https://github.com/Ravbug/sdl3-sample/wiki/Setting-up-your-computer)!
-Otherwise, install CMake and your favorite compiler, and follow the commands below:
+Install CMake and your favorite compiler, and follow the commands below:
 ```sh
 # You need to clone with submodules, otherwise SDL will not download.
 git clone https://github.com/Ravbug/sdl3-sample --depth=1 --recurse-submodules
 cd sdl3-sample
 cmake -S . -B build
 ```
-You can also use an init script inside [`config/`](config/). Then open the IDE project inside `build/` 
+You can also use an init script inside [`scripts/`](scripts/). Then open the IDE project inside `build/` 
 (If you had CMake generate one) and run!
 
 ## Supported Platforms
@@ -29,9 +28,9 @@ I have tested the following:
 | Web* | wasm | Ninja, Make |
 | Android* | x86, x64, arm, arm64 | Ninja via Android Studio |
 
-*See further instructions in [`config/`](config/)
+*See further instructions in [`scripts/`](scripts/)
 
-Note: UWP support was [removed from SDL3](https://github.com/libsdl-org/SDL/pull/10731) during its development. For historical reasons, you can get a working UWP sample via this commit: [df270da](https://github.com/Ravbug/sdl3-sample/tree/df270daa8d6d48426e128e50c73357dfdf89afbf)
+Note: UWP support was [removed from SDL3](https://github.com/libsdl-org/SDL/pull/10731) during its development. For historical reasons, you can get a working UWP sample via this commit: [df270da](https://github.com/jaxkdev/sdl3-sample/tree/df270daa8d6d48426e128e50c73357dfdf89afbf)
 
 ## Updating SDL
 Just update the submodule:
