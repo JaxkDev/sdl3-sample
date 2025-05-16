@@ -1,5 +1,9 @@
 name: Build Sample
-on: [push, pull_request]
+
+on:
+  push:
+    branches:
+      - release
 
 jobs:
     build-win:
